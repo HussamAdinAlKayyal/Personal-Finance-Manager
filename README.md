@@ -51,14 +51,14 @@ Some of the main rules implemented by the system:
 The project is organized into several layers:
 
 ```text
-Finance.Domain <---------+
-        ↓                |
-Finance.Application <----|
-        ↓                |
-Finance.Infrastructure <-|
-        ↓                |
-Finance.Api <------------|
-                         |
+Finance.Domain ←─────────┐
+        ↓              	 │
+Finance.Application ←────┤
+        ↓                │
+Finance.Infrastructure ←─┤
+        ↓                │
+Finance.Api ←────────────┤
+                         │
                    Finance.Test
 ```
 
