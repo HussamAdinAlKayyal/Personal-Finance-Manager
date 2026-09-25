@@ -1,0 +1,107 @@
+@url = {{HostAddress}}/funds
+@income = "InCoMe"
+@expense = "eXpEnSe"
+
+###
+GET {{url}}/1
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}?categoryId=1
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}?currencyId=1
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}?fundType=income
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}?categoryId=1&currencyId=1
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}?currencyId=1&fundType=income
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}?categoryId=1&fundType=income
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}?categoryId=1&currencyId=1&fundType=income
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/range?from=2020-01-01
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/range?to=2026-01-01
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/range?from=2023-01-01&to=2026-01-01
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/date?year=2022
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/date?year=2025&month=8
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/date?year=2025&month=8&day=24
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/total?currencyId=1
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/total?currencyId=1&fundType=income
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/total?currencyId=1&fundType=expense
+Authorization: Bearer {{AccessToken}}
+
+###
+POST {{url}}
+Authorization: Bearer {{AccessToken}}
+Content-Type: {{Json}}
+
+{
+  "amount": 40,
+  "currencyId": 106,
+  "date": "2025-08-24",
+  "categoryId": 1,
+  "fundType": {{expense}}
+}
+
+###
+PUT {{url}}/1
+Authorization: Bearer {{AccessToken}}
+Content-Type: {{Json}}
+
+{
+  "amount": 2,
+  "currencyId": 106,
+  "date": "2025-08-24",
+  "categoryId": 2,
+  "fundType": {{expense}}
+}
+
+###
+DELETE {{url}}/1
+Authorization: Bearer {{AccessToken}}
+
+###

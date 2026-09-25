@@ -1,0 +1,37 @@
+@url = {{HostAddress}}/categories
+@id = 1
+
+GET {{url}}
+Authorization: Bearer {{AccessToken}}
+
+###
+GET {{url}}/{{id}}
+Authorization: Bearer {{AccessToken}}
+
+###
+POST {{url}}
+Authorization: Bearer {{AccessToken}}
+
+{
+  "name": "Name of the category"
+}
+
+###
+POST {{url}}?name=Name%20of%20the%20category
+Authorization: Bearer {{AccessToken}}
+
+###
+PUT {{url}}/{{id}}
+Authorization: Bearer {{AccessToken}}
+
+{
+  "name": "New name of the category"
+}
+
+###
+PUT {{url}}/{{id}}?name=New%20name%20of%20the%20category
+Authorization: Bearer {{AccessToken}}
+
+###
+DELETE {{url}}/{{id}}
+Authorization: Bearer {{AccessToken}}

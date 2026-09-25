@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+packages/
+
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.cache
+Thumbs.db
+.DS_Store

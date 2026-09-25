@@ -1,0 +1,8 @@
+@url = {{HostAddress}}/currencies
+@id = 5
+
+###
+GET {{url}}/{{id}}
+
+###
+GET {{url}}

@@ -1,0 +1,24 @@
+@email = "hussamalkayyal@gmail.com"
+@password = "Husam-123"
+@url = {{HostAddress}}/auth
+
+# @name register
+POST {{url}}/register
+Content-Type: {{Json}}
+
+{
+  "firstName": "Hussam",
+  "lastName": "Al-Kayyal",
+  "dateOfBirth": "2005-08-06",
+  "email": {{email}},
+  "password": {{password}}
+}
+
+###
+POST {{url}}/login
+Content-Type: {{Json}}
+
+{
+  "email": {{email}},
+  "password": {{password}}
+}
